@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+<head>
+    <title>BUBT Gamers Zone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins";
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+        }
+
+        .text {
+            font-size: 5vw;
+            font-weight: bold;
+            color: whitesmoke;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .x {
+            position: relative;
+            width: 160px;
+            height: 50px;
+            line-height: 48px;
+            background: #000;
+            text-transform: uppercase;
+            font-size: 25px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+        .x span {
+            position: absolute;
+            display: block;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            text-align: center;
+            background: #0c0c0c;
+            color: rgba(255, 255, 255, 0.3);
+            transition: 0.5s;
+        }
+
+        .x:hover span {
+            color: rgba(255, 255, 255, 1);
+            cursor: pointer;
+        }
+
+        .x::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,
+                    #c0392b,
+                    #f39c12,
+                    #f1c40f,
+                    #2ecc71,
+                    #3498db,
+                    #2980b9,
+                    #9b59b6,
+                    #8e44ad,
+                    #c0392b,
+                    #f39c12,
+                    #f1c40f,
+                    #2ecc71,
+                    #3498db,
+                    #2980b9,
+                    #9b59b6,
+                    #8e44ad);
+            background-size: 400%;
+            opacity: 0;
+            transition: 2.5s;
+            animation: eff 20s linear infinite;
+        }
+
+        .x:hover::before,
+        .x:hover::after {
+            opacity: 1;
+        }
+
+        @keyframes eff {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #000;
+            background-color: #fff;
+            transition: 1s;
+            border-radius: 5px;
+        }
+
+        .navbar-nav .nav-item .active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="" width="40" height="40">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login-user.php">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup-user.php">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: chartreuse;" class="nav-link" href="./admin/login.php">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text">BUBT Gamers Zone</h1>
+        <a class="x" href="login-user.php"><span>Let's Go</span></a>
+    </div>
+</body>
+
+</html>
